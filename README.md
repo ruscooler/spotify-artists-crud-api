@@ -9,6 +9,14 @@ A small API with CRUD operations on the table with the musical artists that were
 * [Docker Compose](https://docs.docker.com/compose/install/)
 * [Poetry](https://python-poetry.org/) for Python package and environment management
 
+## Spotify API
+
+To set up Spotify API you need to create an application on https://developer.spotify.com website using your Spotify account. 
+To get more info check [this](https://developer.spotify.com/documentaion/general/guides/authorization/app-settings/).  
+
+Copy values of `client_id` and `client_secret` to variables `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` and `.env`
+file 
+
 ## Installation
 
 * Start the stack with Docker Compose:
@@ -30,7 +38,10 @@ poetry install
 ```bash
 poetry run alembic upgrade head
 ```
-
+* Run autotests  
+```bash
+poetry run pytest tests/.
+```
 * Run the API application
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --lifespan=on --use-colors --loop uvloop --http httptools
@@ -41,12 +52,4 @@ The application is available by http://0.0.0.0:8000/
 ## API reference
 
 The API reference is available by http://0.0.0.0:8000/docs
-
-## Spotify API
-
-To set up Spotify API you need to create an application on https://developer.spotify.com website using your Spotify account. 
-To get more info check [this](https://developer.spotify.com/documentaion/general/guides/authorization/app-settings/).  
-
-Copy values of `client_id` and `client_secret` to variables `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` and `.env`
-file 
 
