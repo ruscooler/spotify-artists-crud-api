@@ -42,6 +42,11 @@ The application is available by http://0.0.0.0:8000/
 
 The API reference is available by http://0.0.0.0:8000/docs
 
+## Spotify API
 
+To set up Spotify API you need to create an application on https://developer.spotify.com website using your Spotify account. 
+To get more info check [this](https://developer.spotify.com/documentaion/general/guides/authorization/app-settings/).  
 
+Copy values of `client_id` and `client_secret` to variables `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` and `.env`
+file 
 
