@@ -1,6 +1,6 @@
 # Spotify's artists CRUD API
 
-A small API with CRUD operations on the table with the artists that were got using Spotify API
+A small API with CRUD operations on the table with the musical artists that were got in background task each 10 seconds using Spotify API.
 
 
 ## Requirements
